@@ -24,8 +24,8 @@ functions.
 neighbors. This has all the "if a cell is alive and has x living neighbors..."
 stuff.
 
-`step` is responsible for tessalating the `next` function across the matrix. It
-also has to do some shenanigans with the various functions defined in the
+`step` is responsible for tessellating the `next` function across the matrix.
+It also has to do some shenanigans with the various functions defined in the
 `Data.Matrix` module. There's a whole bunch of definitions in the `where`
 clause, which make it much harder to follow and make the single-line `foldl`
 invocation seem much more magical. I probably shouldn't have done that.
