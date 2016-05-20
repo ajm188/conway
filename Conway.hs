@@ -8,13 +8,13 @@ next True cs
     | neighbors < 2 = False
     | neighbors == 2 || neighbors == 3 = True
     | otherwise = False
-    where neighbors = neighborCount cs
+    where neighbors = liveCount cs
 next False cs
-    | neighborCount cs == 3 = True
+    | liveCount cs == 3 = True
     | otherwise = False
 
-neighborCount :: ([Cell] -> Int)
-neighborCount = length . filter id
+liveCount :: ([Cell] -> Int)
+liveCount = length . filter id
 
 step :: Matrix Cell -> Matrix Cell
 step world =
