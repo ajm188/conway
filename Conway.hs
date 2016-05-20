@@ -22,9 +22,8 @@ step world =
     where rmax = nrows world
           cmax = ncols world
           allNeighborCoords r c = [ (r + r', c + c') | r' <- [-1..1], c' <- [-1..1] ]
-          neighborCoordsOf r c = [ coord | coord <- allNeighborCoords r c, (okCoord coord r c) ]
-          neighborsOf r c = map (\(x, y) -> getElem x y world) $ neighborCoordsOf r c
-          okCoord (x, y) r c
+          neighborsOf r c = map (\(x, y) -> getElem x y world) $ filter (okCoord r c) $ allNeighborCoords r c
+          okCoord r c (x, y)
             | x == r && y == c = False
             | x < 1 || x > rmax = False
             | y < 1 || y > cmax = False
