@@ -17,6 +17,10 @@ After that, you have two options:
 
 ## Walking Through the Code
 
+You can find a blog post [here](http://www.fixedpoint.xyz/blog/literate-conway/) which walks through the code in a literate programming style.
+It goes much more in depth than this README.
+For brief summary, however, continue reading.
+
 All of the Game of Life logic is contained within the `next` and `step`
 functions.
 
