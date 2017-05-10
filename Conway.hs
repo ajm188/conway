@@ -36,6 +36,6 @@ drawAndStep world = do
     print $ convert (\x -> if x then '.' else '_') world
     return $ step world
 
-main = do foldM (\w _ -> drawAndStep w) initialWorld iterations
+main = foldM (\w _ -> drawAndStep w) initialWorld iterations
     where initialWorld = fromList 9 9 $ cycle [True, True, False, True]
           iterations = [1..]
