@@ -1,5 +1,5 @@
-import Control.Monad
-import Data.Matrix
+import           Control.Monad
+import           Data.Matrix
 
 type Cell = Bool
 
